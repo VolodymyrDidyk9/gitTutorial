@@ -14,6 +14,7 @@ struct ContentView: View {
                 destination: ModalView(),
                 label: {
                     Text("Navigate")
+                        .foregroundColor(.red)
                 })
             .navigationTitle("Title")
         }
