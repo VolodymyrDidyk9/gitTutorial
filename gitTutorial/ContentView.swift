@@ -10,13 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @State var isPresented = false
     var body: some View {
-        Button("Show"){
-            isPresented = true
+        NavigationView{
+            Button("Show"){
+                isPresented = true
+            }
+            .sheet(isPresented: $isPresented, content: {
+                ModalView()
+            })
+            .navigationTitle("Title")
         }
-        .sheet(isPresented: $isPresented, content: {
-            Text("Hello, world!")
-                .padding()
-        })
     }
 }
 
