@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isShowing = false
     var body: some View {
         NavigationView{
-            NavigationLink(
-                destination: ModalView(),
-                label: {
-                    Text("Navigate")
-                        .foregroundColor(.red)
-                })
+            Button("Show"){
+                isShowing = true
+            }
+            .sheet(isPresented: $isShowing, content: {
+                ModalView()
+            })
             .navigationTitle("Title")
         }
     }
