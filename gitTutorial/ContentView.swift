@@ -17,7 +17,9 @@ struct ContentView: View {
             .sheet(isPresented: $isShowing, content: {
                 ModalView()
             })
-            .foregroundColor(.green)
+            .foregroundColor(.white)
+            .frame(width: 140, height: 40)
+            .background(Color.red)
             .navigationTitle("Title")
         }
     }
