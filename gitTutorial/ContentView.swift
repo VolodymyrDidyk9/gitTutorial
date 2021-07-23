@@ -17,10 +17,14 @@ struct ContentView: View {
                         Text("Navigate")
                             .foregroundColor(.red)
                     })
-                    Text("Gray Text")                    .foregroundColor(.gray)
+                    Text("Gray Text")                    .foregroundColor(.yellow)
 
                 .navigationTitle("Title")
             }
+            .frame(width: 100, height: 500)
+            .background(Color.red)
+            .frame(width: 500, height: 100)
+            .background(Color.blue)
         }
     }
 }
