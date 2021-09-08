@@ -8,20 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isShowing = false
     var body: some View {
-        NavigationView{
-            Button("Show"){
-                isShowing = true
-            }
-            .sheet(isPresented: $isShowing, content: {
-                ModalView()
-            })
-            .foregroundColor(.white)
-            .frame(width: 140, height: 40)
-            .background(Color.red)
-            .navigationTitle("Title")
-        }
+        Rectangle()
+            .fill(AngularGradient(gradient: Gradient(colors: [.black, .blue, .white, .gray, .clear, .orange, .pink, .green]), center: .bottomLeading))
+            .frame(height: 200)
     }
 }
 
